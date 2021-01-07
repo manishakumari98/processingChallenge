@@ -1,17 +1,20 @@
+package Procedural;
+
 import processing.core.PApplet;
 
 public class ProcessingAssignment extends PApplet {
 
-    public static final int WIDTH = 640;
-    public static final int HEIGHT = 480;
-    public static final int DIAMETER = 10;
+    final int WIDTH = 640;
+    final int HEIGHT = 480;
+    final int DIAMETER = 10;
+
     int xBall1 = 0;
     int xBall2 = 0;
     int xBall3 = 0;
     int xBall4 = 0;
 
     public static void main(String[] args) {
-        PApplet.main("ProcessingAssignment", args);
+        PApplet.main("Procedural.ProcessingAssignment", args);
     }
 
     @Override
@@ -30,8 +33,6 @@ public class ProcessingAssignment extends PApplet {
 
     private int drawBall(int xCoordinate, int height, int speed) {
         ellipse(xCoordinate, height, DIAMETER, DIAMETER);
-        xCoordinate += speed;
-
-        return xCoordinate;
+        return xCoordinate + speed;
     }
 }
